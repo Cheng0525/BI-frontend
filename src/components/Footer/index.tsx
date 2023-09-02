@@ -3,7 +3,7 @@ import { DefaultFooter } from '@ant-design/pro-components';
 import '@umijs/max';
 import React from 'react';
 const Footer: React.FC = () => {
-  const defaultMessage = '蚂蚁集团体验技术部出品';
+  const defaultMessage = '径点科技技术部出品';
   const currentYear = new Date().getFullYear();
   return (
     <DefaultFooter
@@ -13,8 +13,8 @@ const Footer: React.FC = () => {
       copyright={`${currentYear} ${defaultMessage}`}
       links={[
         {
-          key: 'Ant Design Pro',
-          title: 'Ant Design Pro',
+          key: 'Open智能BI',
+          title: 'Open智能BI',
           href: 'https://pro.ant.design',
           blankTarget: true,
         },
@@ -25,9 +25,9 @@ const Footer: React.FC = () => {
           blankTarget: true,
         },
         {
-          key: 'Ant Design',
-          title: 'Ant Design',
-          href: 'https://ant.design',
+          key: 'Open智能BI',
+          title: 'Open智能BI',
+          href: 'https://github.com/Cheng0525',
           blankTarget: true,
         },
       ]}

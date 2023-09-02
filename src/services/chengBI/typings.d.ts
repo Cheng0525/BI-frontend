@@ -1,4 +1,15 @@
 declare namespace API {
+  type addUsingGETParams = {
+    /** name */
+    name?: string;
+  };
+
+  type BaseResponseBiResponse_ = {
+    code?: number;
+    data?: BiResponse;
+    message?: string;
+  };
+
   type BaseResponseBoolean_ = {
     code?: number;
     data?: boolean;
@@ -8,6 +19,12 @@ declare namespace API {
   type BaseResponseChart_ = {
     code?: number;
     data?: Chart;
+    message?: string;
+  };
+
+  type BaseResponseChartVO_ = {
+    code?: number;
+    data?: ChartVO;
     message?: string;
   };
 
@@ -77,6 +94,12 @@ declare namespace API {
     message?: string;
   };
 
+  type BiResponse = {
+    chartId?: number;
+    genChart?: string;
+    genResult?: string;
+  };
+
   type Chart = {
     chartData?: string;
     chartType?: string;
@@ -120,6 +143,10 @@ declare namespace API {
     userId?: number;
   };
 
+  type ChartRebuildRequest = {
+    id?: number;
+  };
+
   type ChartUpdateRequest = {
     chartData?: string;
     chartType?: string;
@@ -133,11 +160,47 @@ declare namespace API {
     updateTime?: string;
   };
 
+  type ChartVO = {
+    chartData?: string;
+    chartType?: string;
+    createTime?: string;
+    execMessage?: string;
+    genChart?: string;
+    genResult?: string;
+    goal?: string;
+    id?: number;
+    name?: string;
+    status?: string;
+  };
+
   type DeleteRequest = {
     id?: number;
   };
 
+  type genChartByAiAsyncMqUsingPOSTParams = {
+    chartType?: string;
+    goal?: string;
+    name?: string;
+  };
+
+  type genChartByAiAsyncUsingPOSTParams = {
+    chartType?: string;
+    goal?: string;
+    name?: string;
+  };
+
+  type genChartByAiUsingPOSTParams = {
+    chartType?: string;
+    goal?: string;
+    name?: string;
+  };
+
   type getChartByIdUsingGETParams = {
+    /** id */
+    id?: number;
+  };
+
+  type getChartVOByIdUsingGETParams = {
     /** id */
     id?: number;
   };
